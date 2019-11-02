@@ -9,7 +9,27 @@ import interfaces.Ingrediente;
 
 public class TestesSanduiches {
 
-	private SanduicheIF sanduiche;
+	private Sanduiche sanduiche;
+	
+	public void testaSanduicheSimples() {
+		
+		sanduiche = new Sanduiche();
+		
+		Ingrediente expected = new PaoFrances();
+		assertEquals(expected.getString(), sanduiche.adicionarPao().getString());
+		
+		expected = new PresuntoDeFrango();
+		assertEquals(expected.getString(), sanduiche.adicionarPresunto().getString());
+		
+		expected = new QueijoMussarela();
+		assertEquals(expected.getString(), sanduiche.adicionarQueijo().getString());
+		
+		expected = new OvoDeGranja();
+		assertEquals(expected.getString(), sanduiche.adicionarOvo().getString());
+		
+		expected = new Tomate();
+		assertEquals(expected.getString(), sanduiche.adicionarTomate().getString());
+	}
 	
 	@Test
 	public void testaSanduicheFrangoCheddar(){
@@ -67,7 +87,7 @@ public class TestesSanduiches {
 		expected = new QueijoMussarela();
 		assertEquals(expected.getString(), sanduiche.adicionarQueijo().getString());
 		
-		expected = new OvoDeGranja();
+		expected = new OvoDeCapoeira();
 		assertEquals(expected.getString(), sanduiche.adicionarOvo().getString());
 		
 		expected = new Tomate();

@@ -5,25 +5,27 @@ import java.util.List;
 
 public class SanduicheFactory{
 	
-	private static SanduicheIF sanduiche;
-	private List<String> ingredientes = new ArrayList<String>();
+	private static Sanduiche sanduiche;
+	private static List<String> ingredientes = new ArrayList<String>();
 	
-	public static SanduicheFactory criarSanduicheFrangoCheddar() {
+	public static void criarSanduicheSimples() {
+		sanduiche = new Sanduiche();
+	}
+	
+	public static void criarSanduicheFrangoCheddar() {
 		sanduiche = new SanduicheFrangoCheddar();
-		return new SanduicheFactory();
 	}
 	
-	public static SanduicheFactory criarSanduicheFrangoPrato() {
+	public static void criarSanduicheFrangoPrato() {
 		sanduiche = new SanduicheFrangoPrato();
-		return new SanduicheFactory();
 	}
 	
-	public static SanduicheFactory criarSanduichePeruMussarela() {
+	public static void criarSanduichePeruMussarela() {
 		sanduiche = new SanduichePeruMussarela();
-		return new SanduicheFactory();
 	}
 	
-	public void montarSanduiche() {
+	public static void montarSanduiche() {
+		ingredientes.clear();
 		ingredientes.add(sanduiche.adicionarPao().getString());
 		ingredientes.add(sanduiche.adicionarQueijo().getString());
 		ingredientes.add(sanduiche.adicionarPresunto().getString());
@@ -31,8 +33,7 @@ public class SanduicheFactory{
 		ingredientes.add(sanduiche.adicionarTomate().getString());
 	}
 	
-	@Override
-	public String toString() {
+	public static String getString() {
 		StringBuilder string = new StringBuilder(sanduiche.toString());
 		string.append("\nLista de Ingredientes:\n");
 		for(int i = 0; i < ingredientes.size(); i++) {

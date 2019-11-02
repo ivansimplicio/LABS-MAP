@@ -6,16 +6,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		SanduicheFactory sanduiche = SanduicheFactory.criarSanduicheFrangoCheddar();
-		sanduiche.montarSanduiche();
-		System.out.println(sanduiche);
+		SanduicheFactory.criarSanduicheSimples();
+		SanduicheFactory.montarSanduiche();
+		System.out.println(SanduicheFactory.getString());
 		
-		sanduiche = SanduicheFactory.criarSanduicheFrangoPrato();
-		sanduiche.montarSanduiche();
-		System.out.println(sanduiche);
+		SanduicheFactory.criarSanduicheFrangoCheddar();
+		SanduicheFactory.montarSanduiche();
+		System.out.println(SanduicheFactory.getString());
 		
-		sanduiche = SanduicheFactory.criarSanduichePeruMussarela();
-		sanduiche.montarSanduiche();
-		System.out.println(sanduiche);
+		SanduicheFactory.criarSanduicheFrangoPrato();
+		SanduicheFactory.montarSanduiche();
+		System.out.println(SanduicheFactory.getString());
+		
+		SanduicheFactory.criarSanduichePeruMussarela();
+		SanduicheFactory.montarSanduiche();
+		System.out.println(SanduicheFactory.getString());
 	}
 }
