@@ -22,12 +22,12 @@ public class Circulo implements FiguraGeometrica{
 
 	@Override
 	public int calcularArea() {
-		return (int)(2 * Math.PI * raio);
+		return (int)(Math.PI * (raio*raio));
 	}
 
 	@Override
 	public int calcularPerimetro() {
-		return (int)(Math.PI * raio);
+		return (int)(2 * Math.PI * raio);
 	}
 	
 	@Override

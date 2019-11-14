@@ -40,16 +40,16 @@ class CirculoTest {
 		int expected = 12;
 		assertEquals(expected, circulo.calcularArea());
 		circulo.setRaio(3);
-		expected = 18;
+		expected = 28;
 		assertEquals(expected, circulo.calcularArea());
 	}
 	
 	@Test
 	void calcularPerimetro() throws ValorInvalidoException {
-		int expected = 6;
+		int expected = 12;
 		assertEquals(expected, circulo.calcularPerimetro());
 		circulo.setRaio(3);
-		expected = 9;
+		expected = 18;
 		assertEquals(expected, circulo.calcularPerimetro());
 	}
 	
